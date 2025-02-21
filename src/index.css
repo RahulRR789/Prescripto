@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+:root {
+    --primary-color: #000B6D
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
