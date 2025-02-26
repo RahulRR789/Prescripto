@@ -1,9 +1,13 @@
 @import "tailwindcss";
 
 :root {
-    --primary-color: #000B6D
+    --primary-color: #000B6D;
+    --bg-color:#5F6EFF;
 }
 
 body::-webkit-scrollbar {
     display: none;
+}
+.grid-col-auto{
+    grid-template-columns:repeat(auto-fill,minmax(200px,1fr)) ;
 }

@@ -1,10 +1,15 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
+import Header from '../components/Header'
+import SpecialityMenu from '../components/SpecialityMenu'
+import TopDoctor from '../components/TopDoctor'
 
 const Home = () => {
   return (
-    <div className='relative top-24 h-screen z-0 p-3 bg-red-600'>
-      home
+    <div className='relative top-24 p-3'>
+      <Header/>
+      <SpecialityMenu/>
+      <TopDoctor/>
     </div>
   )
 }
