@@ -10,7 +10,7 @@ const SpecialityMenu = () => {
       <div className='flex gap-5 p-5'>
         {
             specialityData.map((item,index)=>{
-                return <Link onClick={()=>scrollTo(0,0)} className='flex flex-col justify-center items-center cursor-pointer' key={index} to={`doctor/${item.speciality}`}>
+                return <Link onClick={()=>scrollTo(0,0)} className='flex flex-col justify-center items-center cursor-pointer' key={index} to={`doctors/${item.speciality}`}>
                     <img className='w-20' src={item.image} alt="" />
                     <p>{item.speciality}</p>
                 </Link>

@@ -19,21 +19,21 @@ const Navbar = () => {
                                 <hr className='h-0.5 rounded-full w-[90%] bg-[var(--primary-color)] border-none' /> : ""
                         }
                     </NavLink>
-                    <NavLink to={"/doctors"} className='flex flex-col justify-center items-center' onClick={() => { setActive("doctor") }}>
+                    <NavLink to={"/doctors"} className='flex flex-col justify-center items-center' onClick={() => { setActive("doctor"); scrollTo(0,0) }}>
                         <li className='text-2xl font-medium text-[var(--primary-color)]'>Doctors</li>
                         {
                             active == "doctor" ?
                                 <hr className='h-0.5 rounded-full w-[90%] bg-[var(--primary-color)] border-none' /> : ""
                         }
                     </NavLink>
-                    <NavLink to={"/about"} className='flex flex-col justify-center items-center' onClick={() => { setActive("about") }}>
+                    <NavLink to={"/about"} className='flex flex-col justify-center items-center' onClick={() => { setActive("about"); scrollTo(0,0) }}>
                         <li className='text-2xl font-medium text-[var(--primary-color)]'>About</li>
                         {
                             active == "about" ?
                                 <hr className='h-0.5 rounded-full w-[90%] bg-[var(--primary-color)] border-none' /> : ""
                         }
                     </NavLink>
-                    <NavLink to={"/contact"} className='flex flex-col justify-center items-center' onClick={() => { setActive("contact") }}>
+                    <NavLink to={"/contact"} className='flex flex-col justify-center items-center' onClick={() => { setActive("contact");scrollTo(0,0) }}>
                         <li className='text-2xl font-medium text-[var(--primary-color)]'>Contact</li>
                         {
                             active == "contact" ?
@@ -50,12 +50,12 @@ const Navbar = () => {
                                 <div className='absolute top-2 right-[-30px] pt-14 text-base font-medium text-gray-600 z-20 hidden group-hover:block'>
                                     <div className='bg-stone-100 rounded min-w-48 p-4 flex flex-col gap-4'>
                                         <p className='hover:text-black cursor-pointer' onClick={()=>navigate('/my-profile')}>My Profile</p>
-                                        <p className='hover:text-black cursor-pointer' onClick={()=>navigate('/my-appointment')}>My Appointment</p>
+                                        <p className='hover:text-black cursor-pointer' onClick={()=>{navigate('/my-appointment');scrollTo(0,0)} }>My Appointment</p>
                                         <p className='hover:text-black cursor-pointer' onClick={()=>setToken(false)}>Logout</p>
                                     </div>
                                 </div>
                             </div>
-                            : <button onClick={() => navigate('/login')} className='flex cursor-pointer justify-center items-center text-lg font-medium border-2 py-2 px-5 rounded-4xl bg-[#5F6EFF]  text-white' >Create account</button>
+                            : <button onClick={() => {navigate('/login');scrollTo(0,0)}} className='flex cursor-pointer justify-center items-center text-lg font-medium border-2 py-2 px-5 rounded-4xl bg-[#5F6EFF]  text-white' >Create account</button>
                     }
                 </ul>
             </nav>

@@ -12,7 +12,7 @@ const Header = () => {
                     <p className='text-white'>Simply browse through our exclisive list of trusted doctors <br />
                         schedule your appointment hassle-free</p>
                 </div>
-                <a href="#speciality" className='flex bg-white w-50 py-3 rounded-full px-5 gap-3'>Book appintmonet <img src={assets.arrow_icon} alt="" /></a>
+                <a href="#speciality" className='flex bg-white w-50 py-3 rounded-full px-5 gap-3 hover:scale-105 transition-all'>Book appintmonet <img src={assets.arrow_icon} alt="" /></a>
             </div>
             <div className='h-full flex items-end'>
             <img className='h-96' src={assets.header_img} alt="" />
