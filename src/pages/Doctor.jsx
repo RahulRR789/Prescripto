@@ -3,11 +3,10 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { AppContext } from '../context/AppContext'
 
 const Doctor = () => {
-  let navigate=useNavigate(0)
+  let navigate = useNavigate(0)
   let { doctors } = useContext(AppContext)
   let { speciality } = useParams()
   let [filterDoc, setFilterDoc] = useState([])
-  console.log(speciality)
   let doctorFilter = () => {
     if (speciality) {
       setFilterDoc(doctors.filter(e => e.speciality == speciality))
@@ -24,13 +23,13 @@ const Doctor = () => {
       <div className='flex flex-col gap-5'>
         <p className='text-gray-900'>Browse through the doctors speciality</p>
         <ul className='flex flex-col gap-3'>
-        <li className='border p-3 border-gray- cursor-pointer hover:bg-indigo-100 text-sm rounded-sm' onClick={()=>navigate('/doctors')}>All doctors</li>
-          <li className={`border p-3 border-gray- cursor-pointer hover:bg-indigo-100 text-sm rounded-sm ${speciality=='General physician'?"bg-indigo-100":""}`} onClick={()=>navigate('/doctors/General physician')}>General physician</li>
-          <li className={`border p-3 border-gray- cursor-pointer hover:bg-indigo-100 text-sm rounded-sm ${speciality=='Gynecologist'?"bg-indigo-100":""}`} onClick={()=>navigate('/doctors/Gynecologist')}>Gynecologist</li>
-          <li className={`border p-3 border-gray- cursor-pointer hover:bg-indigo-100 text-sm rounded-sm ${speciality=='Dermatologist'?"bg-indigo-100":""}`} onClick={()=>navigate('/doctors/Dermatologist')}>Dermatologist</li>
-          <li className={`border p-3 border-gray- cursor-pointer hover:bg-indigo-100 text-sm rounded-sm ${speciality=='Pediatricians'?"bg-indigo-100":""}`} onClick={()=>navigate('/doctors/Pediatricians')}>Pediatricians</li>
-          <li className={`border p-3 border-gray- cursor-pointer hover:bg-indigo-100 text-sm rounded-sm ${speciality=='Neurologist'?"bg-indigo-100":""}`} onClick={()=>navigate('/doctors/Neurologist')}>Neurologist</li>
-          
+          <li className='border p-3 border-gray- cursor-pointer hover:bg-indigo-100 text-sm rounded-sm' onClick={() => {navigate('/doctors'), scrollTo(0,0)}}>All doctors</li>
+          <li className={`border p-3 border-gray- cursor-pointer hover:bg-indigo-100 text-sm rounded-sm ${speciality == 'General physician' ? "bg-indigo-100" : ""}`} onClick={() => navigate('/doctors/General physician')}>General physician</li>
+          <li className={`border p-3 border-gray- cursor-pointer hover:bg-indigo-100 text-sm rounded-sm ${speciality == 'Gynecologist' ? "bg-indigo-100" : ""}`} onClick={() => navigate('/doctors/Gynecologist')}>Gynecologist</li>
+          <li className={`border p-3 border-gray- cursor-pointer hover:bg-indigo-100 text-sm rounded-sm ${speciality == 'Dermatologist' ? "bg-indigo-100" : ""}`} onClick={() => navigate('/doctors/Dermatologist')}>Dermatologist</li>
+          <li className={`border p-3 border-gray- cursor-pointer hover:bg-indigo-100 text-sm rounded-sm ${speciality == 'Pediatricians' ? "bg-indigo-100" : ""}`} onClick={() => navigate('/doctors/Pediatricians')}>Pediatricians</li>
+          <li className={`border p-3 border-gray- cursor-pointer hover:bg-indigo-100 text-sm rounded-sm ${speciality == 'Neurologist' ? "bg-indigo-100" : ""}`} onClick={() => navigate('/doctors/Neurologist')}>Neurologist</li>
+
         </ul>
       </div>
       <div className='w-full grid grid-col-auto gap-4 gap-y-6 px-3'>

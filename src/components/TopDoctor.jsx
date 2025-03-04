@@ -12,7 +12,7 @@ const TopDoctor = () => {
       <div className='w-full grid grid-col-auto gap-4 pt-5 gap-y-6 px-3'>
         {
             doctors.slice(0,12).map((doctor,index)=>{
-                return <div onClick={()=>{navigate(`/appointment/${doctor._id}`)}} key={index} className='border border-blue-200 rouded-xl overflow-hidden cursor-pointer'>
+                return <div onClick={()=>{navigate(`/appointment/${doctor._id}`),scrollTo(0,0)}} key={index} className='border border-blue-200 rouded-xl overflow-hidden cursor-pointer'>
                     <img className='bg-blue-50' src={doctor.image} alt="" />
                     <div className='p-4'>
                         <div className='flex items-center gap-2 text-small text-small text-green-500'>
